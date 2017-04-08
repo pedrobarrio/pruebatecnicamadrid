@@ -5,11 +5,11 @@
 
     <table class="table table-condensed">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for jugadore in jugadores %}
@@ -33,7 +33,7 @@
 
     <ul>
         <li>
-            <a  class="btn btn-primary" href="{{ path('jugadores_new') }}">Crear un Nuevo Jugador</a>
+            <a class="btn btn-primary" href="{{ path('jugadores_new') }}">Crear un Nuevo Jugador</a>
         </li>
     </ul>
 {% endblock %}

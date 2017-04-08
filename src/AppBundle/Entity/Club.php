@@ -44,7 +44,7 @@ class Club
     /**
      * @var bool
      *
-     * @ORM\Column(name="borrado", type="boolean")
+     * @ORM\Column(name="borrado", type="boolean", nullable=true)
      */
     private $borrado;
 
@@ -153,6 +153,11 @@ class Club
     public function getBorrado()
     {
         return $this->borrado;
+    }
+
+    function __toString()
+    {
+        return $this->nombre;
     }
 }
 

@@ -6,13 +6,13 @@
 
     <table class="table table-condensed">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Telefono</th>
-                <th>¿Borrado?</th>
-                <th>Acciones</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>¿Borrado?</th>
+            <th>Acciones</th>
+        </tr>
         </thead>
         <tbody>
         {% for club in clubs %}
@@ -35,9 +35,9 @@
         {% endfor %}
         </tbody>
     </table>
-    <ul>
 
-            <a  class="btn btn-primary" href="{{ path('club_new') }}">Crear un Nuevo Club</a>
+    <a class="btn btn-primary" href="{{ path('club_new') }}">Crear un Nuevo Club</a>
 
-    </ul>
+
 {% endblock %}
+

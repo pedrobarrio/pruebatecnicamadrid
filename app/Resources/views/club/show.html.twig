@@ -6,36 +6,30 @@
 
     <table class="table table-condensed">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ club.id }}</td>
-            </tr>
-            <tr>
-                <th>Nombre</th>
-                <td>{{ club.nombre }}</td>
-            </tr>
-            <tr>
-                <th>Telefono</th>
-                <td>{{ club.telefono }}</td>
-            </tr>
-            <tr>
-                <th>Borrado</th>
-                <td>{% if club.borrado %}Yes{% else %}No{% endif %}</td>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ club.id }}</td>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>{{ club.nombre }}</td>
+        </tr>
+        <tr>
+            <th>Telefono</th>
+            <td>{{ club.telefono }}</td>
+        </tr>
+        <tr>
+            <th>Borrado</th>
+            <td>{% if club.borrado %}Si{% else %}No{% endif %}</td>
+        </tr>
         </tbody>
     </table>
+    <a href="{{ path('club_index') }}">Volver al Listado</a>
+    <p>
+        <a class="btn btn-primary" href="{{ path('club_edit', { 'id': club.id }) }}">Editar</a>
 
-    <ul>
-        <li>
-            <a href="{{ path('club_index') }}">Volver al Listado</a>
-        </li>
-        <li>
-            <a href="{{ path('club_edit', { 'id': club.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        {{ form_start(delete_form) }}
+        <input class="btn btn-danger" type="submit" value="Borrar">
+        {{ form_end(delete_form) }}
+    </p>
 {% endblock %}

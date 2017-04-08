@@ -18,7 +18,6 @@ class ClubType extends AbstractType
             'label' => 'Nombre *',
             'label_attr' => array('class' => 'col-md-3'))
         )
-
         ->add('telefono',TextType::class, array(
             'label' => 'Teléfono *',
             'label_attr' => array('class' => 'col-md-3')))

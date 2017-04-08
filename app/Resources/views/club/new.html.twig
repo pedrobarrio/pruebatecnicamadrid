@@ -5,10 +5,10 @@
     <h1>Crear Nuevo Club</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
+    {{ form_widget(form) }}
 
 
-        <input type="submit" class ="btn btn-primary" value="Crear" />
+    <input type="submit" class="btn btn-primary" value="Crear"/>
     {{ form_end(form) }}
 
     <ul>
@@ -17,3 +17,19 @@
         </li>
     </ul>
 {% endblock %}
+   {% block javascripts %}
+       {{ parent() }}
+       <script type="text/javascript">
+
+           jQuery(function ($) {
+               $(".appbundle_club_telefono").mask("000-00-00-00", {
+
+                   // Generamos un evento en el momento que se rellena
+                   completed: function () {
+                       $(".appbundle_club_telefono").addClass("ok")
+                   }
+               });
+
+           });
+       </script>
+   {% endblock %}
